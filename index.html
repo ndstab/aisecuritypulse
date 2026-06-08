@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="AISecurityPulse is a centralised platform that automates and streamlines the responsible disclosure of security issues in AI models, with anonymous, cryptographically verifiable submissions and an automated provider notification pipeline.">
+  <meta name="keywords" content="AI Security, LLMs, Vulnerability Disclosure, Responsible Disclosure">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AISecurityPulse: Automating Security Issue Reports for AI Models</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AISecurityPulse: Automating Security Issue Reports for AI Models">
+  <meta property="og:description" content="A centralised platform for responsible disclosure of AI security vulnerabilities, with anonymous, cryptographically verifiable reporting and automated provider notification.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="static/images/fig1-workflow.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/shield.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero" id="top">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <span class="publication-venue-pill">ECML&nbsp;PKDD&nbsp;2026 · Demo Track</span>
+          <br>
+          <img class="hero-logo" src="./static/images/shield.svg" alt="AISecurityPulse logo">
+
+          <h1 class="title is-1 publication-title">AISecurityPulse</h1>
+          <h2 class="subtitle is-4">Automating Security Issue Reports for AI Models</h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Tuong Phuc Ngo<sup>1,*</sup>,</span>
+            <span class="author-block">
+              Sajjad Nakhwa<sup>2,*</sup>,</span>
+            <span class="author-block">
+              Weijun Li<sup>1</sup>,</span>
+            <span class="author-block">
+              Anudeex Shetty<sup>1,3</sup>,</span>
+            <span class="author-block">
+              Qiongkai Xu<sup>1,3,&dagger;</sup>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Macquarie University, Sydney,</span>
+            <span class="author-block"><sup>2</sup>IIT Bombay, Mumbai,</span>
+            <span class="author-block"><sup>3</sup>The University of Melbourne, Melbourne</span>
+          </div>
+
+          <p class="author-note">
+            <sup>*</sup>Equal contribution &nbsp;&nbsp;
+            <span class="corr"><sup>&dagger;</sup>Corresponding author</span>
+          </p>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Live Platform -->
+              <span class="link-block">
+                <a href="https://paper-pulse-drab.vercel.app/" target="_blank" rel="noopener"
+                   class="external-link button is-normal is-rounded is-link">
+                  <span class="icon"><i class="fas fa-globe"></i></span>
+                  <span>Live Platform</span>
+                </a>
+              </span>
+              <!-- PDF -->
+              <span class="link-block">
+                <a href="static/pdf/AISecurityPulse-ECMLPKDD2026.pdf" target="_blank" rel="noopener"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Demo Video -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1tbSGFSnAKb-PoiFOcr-kpm4n_6jRdfS7?usp=sharing" target="_blank" rel="noopener"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-video"></i></span>
+                  <span>Demo Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/fig1-workflow.png" class="figure-img" alt="Stakeholder interactions through AISecurityPulse.">
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        <span class="asp">AISecurityPulse</span> connects applicants, third-party verifiers, and model providers
+        in a single responsible-disclosure workflow.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="abstract">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in Large Language Models (LLMs) have driven widespread adoption across consumer and
+            enterprise applications, but also exposed critical security vulnerabilities including privacy leaks,
+            jailbreaks, and adversarial misuse. These issues remain underreported due to the fast-paced nature of AI
+            research and the absence of a standardised reporting framework. We introduce
+            <span class="asp">AISecurityPulse</span>, a centralised platform that automates and streamlines the
+            responsible disclosure of security issues in AI models. The platform supports <i>anonymous yet
+            cryptographically verifiable submissions</i>, enabling impartial peer review while protecting reporters,
+            and integrates an <i>automated notification pipeline</i> that promptly informs the relevant model providers.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section" id="features" style="background-color: #fafafa;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">What <span class="asp">AISecurityPulse</span> Does</h2>
+        <p class="subtitle is-6 has-text-grey">A single, open-source workflow connecting researchers, verifiers, and model providers.</p>
+      </div>
+    </div>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-half">
+        <div class="box feature-box">
+          <span class="feature-icon"><i class="fas fa-paper-plane"></i></span>
+          <p class="feature-title">Automated Responsible Disclosure</p>
+          <p>Structured reports for jailbreaks, prompt injections, and ethical compromises are routed automatically to the right model provider.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box feature-box">
+          <span class="feature-icon"><i class="fas fa-user-shield"></i></span>
+          <p class="feature-title">Anonymous, Verifiable Submissions</p>
+          <p>Browser-generated RSA key pairs (2048-bit, SHA-256) let reporters prove authorship without revealing their identity.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box feature-box">
+          <span class="feature-icon"><i class="fas fa-envelope-open-text"></i></span>
+          <p class="feature-title">Automated Notification Pipeline</p>
+          <p>A Supabase Edge Function with the Resend API emails providers a standardised, responsive report with a PDF attachment.</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="box feature-box">
+          <span class="feature-icon"><i class="fas fa-database"></i></span>
+          <p class="feature-title">Live Model &amp; Provider Registry</p>
+          <p>A cron job syncs with the OpenRouter API to keep the registry current, covering 139 models across 67 providers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Providers Get a Clear, Standardised Alert</h2>
+      </div>
+    </div>
+    <div class="columns is-vcentered">
+      <div class="column is-7">
+        <div class="content has-text-justified">
+          <p>
+            On submission, the platform resolves the provider's current security contact in real time and dispatches a
+            responsive HTML notification. Each message carries the report metadata, a quoted findings summary, the
+            affected model name, a UTC timestamp, and a PDF attachment. Anonymous reports include an explicit privacy
+            notice to the recipient.
+          </p>
+          <p>
+            Reporters can also add missing organisations and models directly through the interface; when new provider
+            metadata is supplied, the platform uses it directly, bypassing cached lookups.
+          </p>
+        </div>
+      </div>
+      <div class="column is-5 has-text-centered">
+        <img src="./static/images/fig2-notification.jpg" class="figure-img" style="max-width: 320px;" alt="Example notification email received by a model provider.">
+        <p class="is-size-7 has-text-grey" style="margin-top: 0.75rem;"><b>Figure 2.</b> A representative notification as received by a provider.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background-color: #fafafa;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Trustworthy &amp; Robust</h2>
+        <p class="subtitle is-6 has-text-grey">Cryptographic non-forgeability tests and Grafana k6 load testing confirm both integrity and scalability.</p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column"><p class="stat-number">139</p><p class="stat-label">Models covered</p></div>
+      <div class="column"><p class="stat-number">67</p><p class="stat-label">Providers mapped</p></div>
+      <div class="column"><p class="stat-number">99.99%</p><p class="stat-label">Reliability under load</p></div>
+      <div class="column"><p class="stat-number">260&nbsp;ms</p><p class="stat-label">95th-pct latency</p></div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 1rem;">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Under a sustained load of <b>51.3 requests/s (≈184k/hour)</b> from 100 concurrent users, the platform held
+            <b>99.71% performance stability</b>, with only 0.29% of requests exceeding one second. Tamper tests on signed
+            certificates and 1,000 random report IDs all failed verification, confirming that no payload can be altered
+            or forged after the fact.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Connecting Researchers with Model Providers</h2>
+        <p class="subtitle is-6 has-text-grey">Each provider is associated with a designated security contact, spanning the major AI labs.</p>
+        <div>
+          <span class="provider-tag"><img src="./static/images/providers/OpenAI.svg" alt="">OpenAI</span>
+          <span class="provider-tag"><img src="./static/images/providers/Anthropic.svg" alt="">Anthropic</span>
+          <span class="provider-tag"><img src="./static/images/providers/Google.svg" alt="">Google</span>
+          <span class="provider-tag"><img src="./static/images/providers/Meta.svg" alt="">Meta</span>
+          <span class="provider-tag"><img src="./static/images/providers/Mistral.svg" alt="">Mistral</span>
+          <span class="provider-tag"><img src="./static/images/providers/xAI.svg" alt="">xAI</span>
+          <span class="provider-tag"><img src="./static/images/providers/DeepSeek.svg" alt="">DeepSeek</span>
+          <span class="provider-tag"><img src="./static/images/providers/Cohere.svg" alt="">Cohere</span>
+          <span class="provider-tag"><img src="./static/images/providers/Nvidia.svg" alt="">Nvidia</span>
+          <span class="provider-tag"><img src="./static/images/providers/Perplexity.svg" alt="">Perplexity</span>
+          <span class="provider-tag"><img src="./static/images/providers/Inflection.svg" alt="">Inflection</span>
+          <span class="provider-tag"><img src="./static/images/providers/Alibaba.svg" alt="">Alibaba</span>
+          <span class="provider-tag">+55 more</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX
+      <button id="copy-bibtex" class="button is-small is-rounded is-light" style="vertical-align: middle; margin-left: 10px;">Copy</button>
+    </h2>
+    <pre><code id="bibtex-code">@inproceedings{ngo2026aisecuritypulse,
+  title     = {AISecurityPulse: Automating Security Issue Reports for AI Models},
+  author    = {Ngo, Tuong Phuc and Nakhwa, Sajjad and Li, Weijun and
+               Shetty, Anudeex and Xu, Qiongkai},
+  booktitle = {Proceedings of the European Conference on Machine Learning and
+               Principles and Practice of Knowledge Discovery in Databases
+               (ECML PKDD), Demo Track},
+  year      = {2026}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="static/pdf/AISecurityPulse-ECMLPKDD2026.pdf" target="_blank" rel="noopener" title="Paper">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://paper-pulse-drab.vercel.app/" target="_blank" rel="noopener" title="Live Platform">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Macquarie University &middot; IIT Bombay &middot; The University of Melbourne
+          </p>
+          <p>
+            This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+            Attribution-ShareAlike 4.0 International License</a>.
+            It borrows the <a href="https://github.com/nerfies/nerfies.github.io">source code</a>
+            of the <span class="asp">Nerfies</span> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
